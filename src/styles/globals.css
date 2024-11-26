@@ -1,0 +1,17 @@
+/* styles/globals.css */
+
+/* Import Tailwind's base styles */
+@tailwind base;
+
+/* Import Tailwind's component styles */
+@tailwind components;
+
+/* Import Tailwind's utility classes */
+@tailwind utilities;
+
+/* Custom Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;  /* Example of custom background color */
+  color: #333;  /* Custom text color */
+}
