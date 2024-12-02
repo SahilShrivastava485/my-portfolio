@@ -16,11 +16,11 @@ const Navbar = () => {
           }
         });
       },
-      { threshold: 0.6 }
+      { threshold: 0.6 } // Trigger when 60% of the section is in view
     );
 
     sections.forEach((section) => observer.observe(section));
-    return () => observer.disconnect();
+    return () => observer.disconnect(); // Cleanup observer
   }, []);
 
   return (
@@ -53,12 +53,12 @@ const Navbar = () => {
           </button>
           {/* Mobile Menu */}
           {isMenuOpen && (
-            <div className="absolute top-16 right-6 bg-gray-800 text-white rounded-lg p-4 space-y-4">
+            <div className="absolute top-16 right-6 bg-gray-800 text-white rounded-lg p-4 space-y-4 w-48">
               {['home', 'about', 'experience', 'education', 'contact'].map((section) => (
                 <a
                   key={section}
                   href={`#${section}`}
-                  className={`text-lg ${activeSection === section ? 'border-b-2 border-yellow-400' : 'border-transparent'} hover:border-yellow-400`}
+                  className={`block text-lg ${activeSection === section ? 'border-b-2 border-yellow-400' : 'border-transparent'} hover:border-yellow-400`}
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}
                 </a>
