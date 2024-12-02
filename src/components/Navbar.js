@@ -1,16 +1,74 @@
-import Link from 'next/link'
+"use client";
 
-const Navbar = () => (
-  <nav className="bg-gray-800 text-white px-6 py-4 flex justify-between items-center">
-    <h1 className="text-3xl font-bold">Sahil Shrivastava</h1>
-    <div className="space-x-6">
-      <Link href="/" className="text-lg hover:text-yellow-400">Home</Link>
-      <Link href="/about" className="text-lg hover:text-yellow-400">About</Link>
-      <Link href="/experience" className="text-lg hover:text-yellow-400">Experience</Link>
-      <Link href="/education" className="text-lg hover:text-yellow-400">Education</Link>
-      <Link href="/contact" className="text-lg hover:text-yellow-400">Contact</Link>
-    </div>
-  </nav>
-);
+import { useState, useEffect } from 'react';
 
-export default Navbar
+const Navbar = () => {
+  const [activeSection, setActiveSection] = useState('home');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.6 }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <nav className="bg-gray-800 text-white fixed w-full z-10 shadow-lg">
+      <div className="flex justify-between items-center px-6 py-4">
+        {/* Favicon as Navbar Logo */}
+        <img src="/favicon.ico" alt="SS Logo" width="40" height="40" className="mr-4" />
+
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex space-x-6">
+          {['home', 'about', 'experience', 'education', 'contact'].map((section) => (
+            <a
+              key={section}
+              href={`#${section}`}
+              className={`text-lg pb-1 border-b-2 ${
+                activeSection === section ? 'border-yellow-400' : 'border-transparent'
+              } hover:border-yellow-400`}
+            >
+              {section.charAt(0).toUpperCase() + section.slice(1)}
+            </a>
+          ))}
+        </div>
+
+        {/* Mobile Hamburger Menu */}
+        <div className="md:hidden">
+          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-6 w-6">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+          {/* Mobile Menu */}
+          {isMenuOpen && (
+            <div className="absolute top-16 right-6 bg-gray-800 text-white rounded-lg p-4 space-y-4">
+              {['home', 'about', 'experience', 'education', 'contact'].map((section) => (
+                <a
+                  key={section}
+                  href={`#${section}`}
+                  className={`text-lg ${activeSection === section ? 'border-b-2 border-yellow-400' : 'border-transparent'} hover:border-yellow-400`}
+                >
+                  {section.charAt(0).toUpperCase() + section.slice(1)}
+                </a>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;

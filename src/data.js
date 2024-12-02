@@ -2,18 +2,19 @@
 
 export const personalInfo = {
   name: "Sahil Shrivastava",
-  title: "Frontend Engineer",
-  about: "I am a passionate Frontend Engineer with expertise in UI/UX design, React.js, Next.js, and a focus on building user-centered web applications. With over 2 years of experience, I’ve contributed to multiple projects, including medical applications, streamlining complex data visualization for clinical scientists.",
+  title: "Software Engineer",
+  about: "I am a Software Engineer with over 2 years of experience in frontend and backend development. I have worked on enhancing JavaScript libraries for data visualization, building scalable web applications, and improving user interfaces for better user experience. My expertise includes React.js, Next.js, Python (Flask), and MongoDB, with a strong focus on streamlining processes and improving system performance.",
   skills: [
     "ReactJS", "Next.js", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Material UI", "Flask", "MongoDB", "MySQL", "UI/UX Design", "Responsive Design"
   ],
   contact: {
     email: "sahilshrivastava485@gmail.com",
     phone: "+91 9354672343",
-    linkedin: "https://www.linkedin.com/in/sahil-shrivastava-bb74a019b/",
+    linkedin: "https://linkedin.com/in/sahil-shrivastava",
     github: "https://github.com/SahilShrivastava485"
   }
 };
+
 
 export const experience = [
   {
@@ -40,10 +41,21 @@ export const experience = [
 
 export const education = [
   {
-    degree: "Bachelor of Technology in Computer Science",
+    degree: "Bachelor of Technology in Computer Science - CGPA 8.5",
     institution: "Jaypee Institute Of Information Technology, Noida, India",
-    duration: "07/2018 – 06/2022"
-  }
+    duration: "07/2018 – 06/2022",
+  },
+  {
+    degree: "Higher Secondary School (Class 12th) - 85.8%",
+    institution: "Kendriya Vidyalaya No.3, Jhansi",
+    duration: "2017",
+  },
+  {
+    degree: "Secondary School (Class 10th) - CGPA 9.6",
+    institution: "Kendriya Vidyalaya No.2, Jhansi",
+    duration: "2015",
+  },
 ];
+
 
 export const projects = []; // Keep this for public projects if needed in the future.
