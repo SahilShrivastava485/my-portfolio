@@ -15,3 +15,27 @@ body {
   background-color: #f0f0f0;  /* Example of custom background color */
   color: #333;  /* Custom text color */
 }
+
+* {
+  user-select: none;
+  -webkit-user-select: none; 
+  -moz-user-select: none; 
+  -ms-user-select: none;  
+}
+
+/* styles/globals.css */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* In globals.css */
+.transition-all {
+  transition: all 0.3s ease;
+}
