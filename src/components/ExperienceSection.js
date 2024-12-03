@@ -1,4 +1,5 @@
 'use client'
+
 import { useState } from "react";
 
 const ExperienceSection = ({ experience }) => {
@@ -8,14 +9,14 @@ const ExperienceSection = ({ experience }) => {
     <section id="experience" className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-3xl font-bold mb-8">Professional Experience</h2>
-        <div className="flex">
+        <div className="flex flex-col sm:flex-row">
           {/* Left-Side Tabs */}
-          <div className="w-1/3 border-r border-gray-300">
+          <div className="sm:w-1/3 flex sm:flex-col flex-row gap-4 sm:mr-8 mb-6 sm:mb-0">
             {experience.map((item, idx) => (
               <button
                 key={idx}
                 onClick={() => setActiveIndex(idx)}
-                className={`w-full text-left px-4 py-5 flex items-center gap-4 border-b border-gray-300 ${
+                className={`w-full text-left px-4 py-5 flex items-center gap-4 border-b border-gray-300 rounded-lg sm:mb-4 ${
                   activeIndex === idx
                     ? "bg-gray-200 text-blue-600"
                     : "bg-white text-gray-700 hover:bg-gray-100"
@@ -36,8 +37,8 @@ const ExperienceSection = ({ experience }) => {
             ))}
           </div>
 
-          {/* Right-Side Card */}
-          <div className="w-2/3 p-6 bg-gray-100 shadow-lg rounded-lg h-96 overflow-y-auto">
+          {/* Right-Side Content Card */}
+          <div className="sm:w-2/3 p-6 bg-gray-100 shadow-lg rounded-lg h-96 overflow-y-auto">
             <h3 className="text-2xl font-semibold mb-2">
               {experience[activeIndex].role}
             </h3>

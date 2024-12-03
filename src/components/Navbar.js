@@ -31,7 +31,7 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-6">
-          {['home', 'about', 'experience', 'education', 'contact'].map((section) => (
+          {['home', 'skills', 'experience', 'education', 'contact'].map((section) => (
             <a
               key={section}
               href={`#${section}`}
@@ -54,7 +54,7 @@ const Navbar = () => {
           {/* Mobile Menu */}
           {isMenuOpen && (
             <div className="absolute top-16 right-6 bg-gray-800 text-white rounded-lg p-4 space-y-4 w-48">
-              {['home', 'about', 'experience', 'education', 'contact'].map((section) => (
+              {['home', 'skills', 'experience', 'education', 'contact'].map((section) => (
                 <a
                   key={section}
                   href={`#${section}`}
