@@ -3,7 +3,7 @@
 export const personalInfo = {
   name: "Sahil Shrivastava",
   title: "Software Engineer",
-  about: "I am a Software Engineer with experience in developing and managing AI-driven web applications, bringing a solid blend of frontend and backend expertise. Proficient in ReactJS, Flask, and MongoDB, with a strong focus on enhancing visualization tools and creating intuitive user interfaces. Played a key role in building a web application for clinical scientists, improving data visualization and overall user experience. Skilled in crafting Python solutions that streamline data handling and optimize database performance. Known for adaptability, having successfully managed various projects simultaneously while working closely with diverse teams.",
+  about: "Experienced in developing and managing AI-driven web applications, bringing a solid blend of frontend and backend expertise. Proficient in ReactJS, Flask, and MongoDB, with a strong focus on enhancing visualization tools and creating intuitive user interfaces. Played a key role in building a web application for clinical scientists, improving data visualization and overall user experience. Skilled in crafting Python solutions that streamline data handling and optimize database performance.",
   skills: {
     frontend: ['Next.js','React.js', 'HTML', 'CSS', 'JavaScript'],
     backend: ['Python', 'Flask', 'Celery'],
