@@ -11,7 +11,6 @@ export const personalInfo = {
   },
   contact: {
     email: "sahilshrivastava485@gmail.com",
-    phone: "+91 9354672343",
     linkedin: "https://linkedin.com/in/sahil-shrivastava",
     github: "https://github.com/SahilShrivastava485"
   }
