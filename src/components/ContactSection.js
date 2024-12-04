@@ -7,7 +7,6 @@ const ContactSection = ({ contact }) => (
       <p className="text-lg text-gray-700">Feel free to reach out for collaborations or inquiries:</p>
       <ul className="list-none mt-4 text-lg text-gray-700">
         <li>Email: <a href={`mailto:${contact.email}`} className="text-blue-500 hover:underline">{contact.email}</a></li>
-        <li>Phone: <span className="text-gray-800">{contact.phone}</span></li>
         <li>
           LinkedIn: <a href={contact.linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
             {contact.linkedin}
