@@ -11,8 +11,8 @@ export const personalInfo = {
   },
   contact: {
     email: "sahilshrivastava485@gmail.com",
-    linkedin: "https://linkedin.com/in/sahil-shrivastava",
-    github: "https://www.linkedin.com/in/sahil-shrivastava-bb74a019b"
+    linkedin: "https://www.linkedin.com/in/sahil-shrivastava-bb74a019b",
+    github: "https://github.com/SahilShrivastava485"
   }
 };
 
