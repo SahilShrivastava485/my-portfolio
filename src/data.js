@@ -5,9 +5,10 @@ export const personalInfo = {
   title: "Software Engineer",
   about: "Experienced in developing and managing AI-driven web applications, bringing a solid blend of frontend and backend expertise. Proficient in ReactJS, Flask, and MongoDB, with a strong focus on enhancing visualization tools and creating intuitive user interfaces. Played a key role in building a web application for clinical scientists, improving data visualization and overall user experience. Skilled in crafting Python solutions that streamline data handling and optimize database performance.",
   skills: {
-    frontend: ['Next.js','React.js', 'HTML', 'CSS', 'JavaScript'],
-    backend: ['Python', 'Flask', 'Celery'],
-    database: ['MongoDB', 'SQL', 'Redis']
+    frontend: ['HTML', 'CSS', 'Tailwind CSS' , 'Javascript' ,'React.js', 'Next.js', 'Material UI'],
+    backend: ['Flask', 'Celery', 'Gunicorn', 'Django', 'Crontab', 'Multiprocessing','Python','C++'],
+    database: ['MongoDB', 'SQL', 'Redis'],
+    understanding: ['Git', 'Linux', 'Postman', 'Vim', 'Unit Testing', 'Data Structures', 'Algorithms', 'System Design', 'Object Oriented Programming']
   },
   contact: {
     email: "sahilshrivastava485@gmail.com",
@@ -21,7 +22,7 @@ export const experience = [
   {
     role: "Software Engineer",
     company: "Nference",
-    duration: "07/2022 – Present",
+    duration: "02/2022 – Present",
     logo: "/nference_logo.png",
     description:[
       "Enhanced an internal JavaScript and HTML5 Canvas library utilized for visualizing ECG graphs across 4-5 applications.",
@@ -34,18 +35,10 @@ export const experience = [
       "Implemented Flask to create backend APIs for relaying AI insights to the UI, enhancing system agility, user satisfaction by 25%, and decision-making speed.",
       "Engineered the incorporation of MongoDB to enhance database efficiency, enabling seamless storage and retrieval of annotated results; this implementation led to a 50% decrease in data access latency, improving overall system performance.",
       "Architected Python solutions to streamline data generation and database updates, resulting in a 50% reduction in manual data handling, subsequently optimizing database performance and ensuring seamless system scalability.",
-      "Developed a service leveraging Celery workers to dynamically generate responses utilizing my team's fine-tuned LLM models, seamlessly integrated into the backend of four distinct applications."
-    ],    
-  },
-  {
-    role: "Software Engineer Intern",
-    company: "Nference",
-    duration: "02/2022 – 06/2022",
-    description: [
+      "Developed a service leveraging Celery workers to dynamically generate responses utilizing my team's fine-tuned LLM models, seamlessly integrated into the backend of four distinct applications.",
       "Revamped the UI for multiple applications, improving user experience by 50%.",
       "Identified and resolved 10+ UI issues, leading to a 25% boost in user satisfaction."
-    ],
-    logo: "/nference_logo.png"
+    ],    
   }
 ];
 

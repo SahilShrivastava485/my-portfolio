@@ -16,11 +16,10 @@ const ExperienceSection = ({ experience }) => {
               <button
                 key={idx}
                 onClick={() => setActiveIndex(idx)}
-                className={`w-full text-left px-4 py-5 flex items-center gap-4 border-b border-gray-300 rounded-lg sm:mb-4 ${
-                  activeIndex === idx
+                className={`w-full text-left px-4 py-5 flex items-center gap-4 border-b border-gray-300 rounded-lg sm:mb-4 ${activeIndex === idx
                     ? "bg-gray-200 text-blue-600"
                     : "bg-white text-gray-700 hover:bg-gray-100"
-                }`}
+                  }`}
               >
                 {/* Logo */}
                 <img
@@ -38,16 +37,24 @@ const ExperienceSection = ({ experience }) => {
           </div>
 
           {/* Right-Side Content Card */}
-          <div className="sm:w-2/3 p-6 bg-gray-100 shadow-lg rounded-lg h-96 overflow-y-auto">
-            <h3 className="text-2xl font-semibold mb-2">
+          <div className="sm:w-2/3 p-6 bg-gray-100 shadow-lg rounded-lg h-96 overflow-hidden flex flex-col">
+            {/* Title */}
+            <h3 className="text-3xl font-bold text-gray-800 mb-4 border-b-2 border-gray-300 pb-2">
               {experience[activeIndex].role}
             </h3>
-            <ul className="list-disc pl-5 text-lg text-gray-700">
-              {experience[activeIndex].description.map((point, idx) => (
-                <li key={idx}>{point}</li>
-              ))}
-            </ul>
+
+            {/* Description List */}
+            <div className="flex-grow overflow-y-auto">
+              <ul className="list-disc pl-6 text-lg text-gray-700 space-y-2">
+                {experience[activeIndex].description.map((point, idx) => (
+                  <li key={idx} className="hover:text-blue-500 transition-all duration-300">
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
+
         </div>
       </div>
     </section>

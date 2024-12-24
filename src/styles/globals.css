@@ -9,6 +9,10 @@
 /* Import Tailwind's utility classes */
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Custom Global Styles */
 body {
   font-family: 'Arial', sans-serif;
@@ -38,4 +42,18 @@ body {
 /* In globals.css */
 .transition-all {
   transition: all 0.3s ease;
+}
+
+/* Thin scrollbar for content card */
+.sm\:w-2\/3 .overflow-y-auto::-webkit-scrollbar {
+  width: 4px; /* Makes the scrollbar thinner */
+}
+
+.sm\:w-2\/3 .overflow-y-auto::-webkit-scrollbar-thumb {
+  background: #888; /* Scrollbar thumb color */
+  border-radius: 4px;
+}
+
+.sm\:w-2\/3 .overflow-y-auto::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Scrollbar thumb hover color */
 }
